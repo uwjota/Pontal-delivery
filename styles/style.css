@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    overflow-x: hidden; /* Remove rolagem horizontal */
+    scroll-behavior: smooth;
+  }
+
+  .slider-item {
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  /* Esconde a barra de rolagem dentro do slider */
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  /* Barra de progresso customizada */
+  .scrollbar {
+    height: 5px;
+    background: #ffb225;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  /* Personalização da barra de rolagem principal */
+  body::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #ffb225; /* Cor de fundo da barra */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #1f1f1f; /* Cor da barra (polegar) */
+    border-radius: 4px; /* Borda arredondada */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #b81604; /* Cor ao passar o mouse */
+  }
+
+  .categorias {
+    @apply min-w-[50%] flex flex-col items-center md:min-w-[27%] p-4 rounded-lg snap-center;
+  }
+  
+  .categorias img {
+    @apply w-72 lg:w-48 rounded-full border-primeiracor border-2;
+   }
+  
+   .categorias p {
+     @apply mt-2 text-center font-semibold text-2xl text-segundacor;
+   }

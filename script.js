@@ -1,26 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const selectElement = document.getElementById('mySelect');
-    
-    // Verifica se já existe uma página selecionada no localStorage
-    const selectedPage = localStorage.getItem('selectedPage');
-    
-    if (selectedPage && window.location.href.indexOf(selectedPage) === -1) {
-        // Se já existe uma página selecionada e não estamos nela, redireciona para a página
-        window.location.href = selectedPage;
-    }
-
-    selectElement.addEventListener('change', (event) => {
-        const selectedValue = event.target.value;
-        
-        if (selectedValue) {
-            // Salva a página selecionada no localStorage
-            localStorage.setItem('selectedPage', selectedValue);
-            
-            // Redireciona para a página selecionada
-            window.location.href = selectedValue;
-        }
-    });
-});
 
 
 const slider = document.querySelector('#category-slider');
@@ -121,21 +98,4 @@ updateOpacity();
 updateScrollbar();
 
 
-// Verificação do Atendimento
-function checkRestaurante() {
-    const data = new Date();
-    const hora = data.getHours();
-    return hora >= 19 && hora < 24;
-    // Restaurante aberto
-}
 
-const spanItem = document.getElementById("acorsi-atendimento");
-const isOpen = checkRestaurante();
-
-if (isOpen) {
-    spanItem.classList.remove("bg-vermelho");
-    spanItem.classList.add("bg-verde");
-} else {
-    spanItem.classList.remove("bg-verde");
-    spanItem.classList.add("bg-vermelho");
-}

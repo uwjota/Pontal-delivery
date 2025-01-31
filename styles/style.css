@@ -37,26 +37,39 @@ html, body {
   }
   
   body::-webkit-scrollbar-track {
-    background: #ffb225; /* Cor de fundo da barra */
+    background: #1f1f1f; /* Cor de fundo da barra */
   }
   
   body::-webkit-scrollbar-thumb {
-    background: #1f1f1f; /* Cor da barra (polegar) */
+    background: #ffb225; /* Cor da barra (polegar) */
     border-radius: 4px; /* Borda arredondada */
   }
+
+  .voltarbtn {
+    @apply py-8 px-6 text-terceiracor text-xl items-center font-semibold bg-segundacor rounded-r-full hover:scale-110 duration-300;
+  }  
   
-  body::-webkit-scrollbar-thumb:hover {
-    background: #b81604; /* Cor ao passar o mouse */
-  }
 
   .categorias {
-    @apply min-w-[50%] flex flex-col items-center md:min-w-[27%] p-4 rounded-lg snap-center;
+    @apply min-w-[50%] flex flex-col items-center md:min-w-[27%] p-2 rounded-lg snap-center;
   }
   
   .categorias img {
-    @apply w-72 lg:w-48 rounded-full border-primeiracor border-2;
+    @apply w-44 rounded-full border-primeiracor border-2;
    }
   
    .categorias p {
      @apply mt-2 text-center font-semibold text-2xl text-segundacor;
    }
+
+   h1 {
+    @apply text-terceiracor font-bold text-6xl;
+   }
+
+   h6 {
+    @apply text-xl md:text-3xl font-bold mb-6 text-center text-segundacor;
+   }
+
+  .cardempresas {
+    @apply block bg-terceiracor rounded-t-3xl rounded-b-lg overflow-hidden hover:shadow-lg hover:scale-105 duration-300;
+  }

@@ -9,6 +9,7 @@ html, body {
 
   .slider-item {
     transition: opacity 0.3s ease;
+    
   }
   
   
@@ -55,11 +56,7 @@ html, body {
   }
   
   .categorias img {
-    @apply w-44 rounded-full border-primeiracor border-2;
-   }
-  
-   .categorias p {
-     @apply mt-2 text-center font-semibold text-2xl text-segundacor;
+    @apply w-52 rounded-full;
    }
 
    h1 {
@@ -73,3 +70,12 @@ html, body {
   .cardempresas {
     @apply block bg-terceiracor rounded-t-3xl rounded-b-lg overflow-hidden hover:shadow-lg hover:scale-105 duration-300;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  

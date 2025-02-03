@@ -68,7 +68,7 @@ html, body {
    }
 
   .cardempresas {
-    @apply block bg-terceiracor rounded-t-3xl rounded-b-lg overflow-hidden hover:shadow-lg hover:scale-105 duration-300;
+    @apply block bg-terceiracor rounded-t-3xl rounded-b-lg overflow-hidden;
   }
 
   .no-scrollbar::-webkit-scrollbar {
@@ -78,4 +78,6 @@ html, body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
+
   

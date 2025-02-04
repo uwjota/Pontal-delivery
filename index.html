@@ -38,34 +38,28 @@
   </header>
 
   <section class="relative overflow-hidden">
-    <div class="flex md:max-w-6xl md:mx-auto md:grid md:grid-cols-2 gap-4 md:gap-8 snap-x snap-mandatory overflow-x-auto no-scrollbar p-8">
+    <div
+      class="flex md:max-w-6xl md:mx-auto md:grid md:grid-cols-2 gap-4 md:gap-8 snap-x snap-mandatory overflow-x-auto no-scrollbar p-4">
       <!-- First Banner -->
-      <div class="relative border-primeiracor border-4 flex-shrink-0 w-[90%] md:w-[100%] max-w-md md:max-w-none overflow-hidden bg-white rounded-2xl snap-center hover:scale-105 duration-300">
+      <div
+        class="relative border-primeiracor border-4 flex-shrink-0 w-[90%] md:w-[100%] max-w-md md:max-w-none overflow-hidden bg-white rounded-2xl snap-center hover:scale-105 duration-300">
         <a href="https://yotube.com/" target="_blank">
-        <img
-          src="./assets/bem-vindo.webp"
-          alt="Bem Vindo"
-          class="w-full object-cover h-64"
-        /></a>
+          <img src="./assets/bem-vindo.webp" alt="Bem Vindo" class="w-full object-cover h-64" /></a>
       </div>
 
       <!-- Second Banner -->
-      <div class="relative border-primeiracor border-4 flex-shrink-0 w-[90%] md:w-[100%] max-w-md md:max-w-none overflow-hidden bg-white rounded-2xl snap-center hover:scale-105 duration-300">
+      <div
+        class="relative border-primeiracor border-4 flex-shrink-0 w-[90%] md:w-[100%] max-w-md md:max-w-none overflow-hidden bg-white rounded-2xl snap-center hover:scale-105 duration-300">
         <a href="https://www.instagram.com/pontaldelivery" target="_blank">
-        <img
-          src="./assets/siga-nos.webp"
-          alt="Siga-nos"
-          class="w-full object-cover h-64"
-        /></a>
+          <img src="./assets/siga-nos.webp" alt="Siga-nos" class="w-full object-cover h-64" /></a>
       </div>
     </div>
   </section>
 
-  <nav class="max-w-6xl mx-auto mb-10 md:pr-4">
+  <nav class="max-w-6xl mx-auto mb-10 mt-6 md:pr-6">
     <h6>Qual o Sabor da sua Fome Hoje?</h6>
     <div class="relative">
-      <div id="category-slider"
-        class="flex overflow-x-auto slider-container gap-2 snap-x snap-mandatory scroll-smooth">
+      <div id="category-slider" class="flex overflow-x-auto slider-container gap-2 snap-x snap-mandatory scroll-smooth">
         <a href="lanche.html" class="categorias slide-item">
           <img src="./assets/lanche.webp" alt="Lanche">
         </a>
@@ -93,61 +87,91 @@
   </nav>
 
 
-  <main class="min-h-screen pt-8 px-4">
-    <h6>Principais Restaurantes:</h6>
+  <main class="min-h-screen pt-8 md:mb-8 px-4">
     <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
-        <!-- Card de Restaurante -->
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
 
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
+   <!-- Container com flex e alinhamento correto -->
+   <div class="flex justify-between items-center mb-8">
+    <h5 class="text-2xl md:text-3xl text-segundacor font-bold">Restaurantes:</h5>
+    <div class="relative w-1/2">
+      <div class="flex">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Buscar restaurante..." 
+          class="w-full p-2 border border-gray-400 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primeiracor"
+        />
+        <button 
+          id="searchButton" 
+          class="bg-primeiracor text-terceiracor px-4 rounded-r-lg hover:text-segundacor duration-300"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+        </button>
+      </div>
 
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
-
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
-
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
-
-        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
-          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi" class="w-full h-48 object-cover">
-          <div class="py-4 px-8 mb-4">
-            <p class="text-3xl font-bold text-center text-segundacor">Acorsi</p>
-          </div>
-        </a>
-
-     
+      <!-- Lista de Resultados -->
+      <div id="resultList" class="absolute z-10 w-full bg-terceiracor border border-gray-400 rounded-lg shadow-xl hidden mt-1">
+        <!-- Resultados dinâmicos -->
       </div>
     </div>
-    <div class="text-center mt-8">
-    <button class="bg-primeiracor text-segundacor text-xl font-bold rounded-xl mb-4 p-4 hover:scale-105 hover:text-terceiracor duration-300">Ver mais!</button>
   </div>
+  
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <!-- Card de Restaurante -->
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p>Acorsi</p>
+          </div>
+        </a>
+  
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p>Conveniência do Mah</p>
+          </div>
+        </a>
+  
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p>Elite Lounge</p>
+          </div>
+        </a>
+  
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p>Acorsi</p>
+          </div>
+        </a>
+  
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p>Acorsi</p>
+          </div>
+        </a>
+  
+        <a href="https://projeto-cardapio-pearl.vercel.app/" class="cardempresas">
+          <img src="https://projeto-cardapio-pearl.vercel.app/assets/fundo.webp" alt="Acorsi">
+          <div class="py-4 px-8">
+            <p data-name="Acorsi">Acorsi</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="text-center mt-8">
+        <button class="border-b-4 border-primeiracor text-segundacor text-xl md:text-2xl font-bold rounded-sm mb-8 p-2 hover:scale-105 hover:text-primeiracor duration-300">
+          Ver mais...
+        </button>
+      </div>
+    </div>
   </main>
   
+
 
   <footer class="py-8 bg-primeiracor text-center">
     <h6 class="text-terceiracor">Fale Conosco:</h6>
@@ -175,6 +199,7 @@
   </footer>
 
 
+   <script src="busca.js"></script>
   <script src="inputs.js"></script>
   <script src="protecao.js"></script>
   <script src="script.js"></script>

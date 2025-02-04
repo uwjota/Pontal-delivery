@@ -64,11 +64,19 @@ html, body {
    }
 
    h6 {
-    @apply text-xl md:text-3xl font-bold mb-6 text-center text-segundacor;
+    @apply text-2xl md:text-3xl font-bold mb-6 text-center text-segundacor;
    }
 
   .cardempresas {
-    @apply block bg-terceiracor rounded-t-3xl rounded-b-lg overflow-hidden;
+    @apply block bg-terceiracor rounded-t-3xl shadow-xl rounded-b-lg overflow-hidden;
+  }
+
+   .cardempresas img {
+    @apply w-full h-40 object-cover;
+   }
+
+  .cardempresas p {
+    @apply text-2xl font-bold text-center text-segundacor;
   }
 
   .no-scrollbar::-webkit-scrollbar {

@@ -17,6 +17,14 @@ html, body {
   .slider-container::-webkit-scrollbar {
     display: none;
   }
+
+  .slider-container {
+    padding-right: 2rem; /* Espaço extra no final */
+  }
+
+  .categorias:last-child {
+    scroll-snap-align: end;
+  }
   
   
   /* Barra de progresso customizada */

@@ -2714,15 +2714,6 @@ html, body {
   display: none;
 }
 
-.slider-container {
-  padding-right: 1rem;
-  /* Espaço extra no final */
-}
-
-.categorias:last-child {
-  scroll-snap-align: end;
-}
-
 /* Barra de progresso customizada */
 
 .scrollbar {
@@ -3020,6 +3011,10 @@ h6 {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:pr-6 {
+    padding-right: 1.5rem;
   }
 
   .md\:text-2xl {

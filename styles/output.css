@@ -737,10 +737,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -2144,10 +2140,6 @@ video {
   padding-top: 2rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2926,19 +2918,14 @@ h6 {
   font-weight: 700;
 }
 
-.hover\:text-segundacor:hover {
-  --tw-text-opacity: 1;
-  color: rgb(31 31 31 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-terceiracor:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-primeiracor:hover {
   --tw-text-opacity: 1;
   color: rgb(255 178 37 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-segundacor:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 31 31 / var(--tw-text-opacity, 1));
 }
 
 .before\:hover\:text-center:hover::before {
@@ -3031,6 +3018,11 @@ h6 {
     padding-right: 1.5rem;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -3039,11 +3031,6 @@ h6 {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 

@@ -9,6 +9,7 @@ let scrollLeft;
 let userInteracting = false;
 let interactionTimeout;
 
+
 // Função para atualizar a opacidade dos itens
 function updateOpacity() {
     items.forEach(item => {
@@ -36,7 +37,7 @@ function resetAutoSlideTimer() {
     userInteracting = true;
     interactionTimeout = setTimeout(() => {
         userInteracting = false;
-    }, 5000); // 5 segundos sem interação
+    }, 4000); // 4 segundos sem interação
 }
 
 // Funcionalidade de arrasto com o mouse
@@ -77,6 +78,7 @@ window.addEventListener('resize', () => {
     updateScrollbar();
 });
 
+
 // Função para rolar automaticamente a cada 6 segundos
 function autoSlide() {
     setInterval(() => {
@@ -87,7 +89,7 @@ function autoSlide() {
                 slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
             }
         }
-    }, 5000);
+    }, 6000);
 }
 
 // Inicia o autoSlide
@@ -99,3 +101,41 @@ updateScrollbar();
 
 
 
+const container = document.getElementById('banner-container');
+let scrollAmount = 0;
+let autoScrollTimeout;
+let userInactiveTimeout;
+const scrollInterval = 8000; // Scroll automático a cada 8 segundos
+const inactivityDelay = 6000; // Tempo de inatividade antes de retomar o scroll
+
+function scrollBanner() {
+  scrollAmount += container.clientWidth;
+  if (scrollAmount >= container.scrollWidth) {
+    scrollAmount = 0;
+  }
+  container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+}
+
+function startAutoScroll() {
+  autoScrollTimeout = setInterval(scrollBanner, scrollInterval);
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScrollTimeout);
+}
+
+function resetInactivityTimer() {
+  stopAutoScroll();
+  clearTimeout(userInactiveTimeout);
+  userInactiveTimeout = setTimeout(() => {
+    startAutoScroll();
+  }, inactivityDelay);
+}
+
+// Detecta interações ativas no banner
+['scroll', 'mousedown', 'mousemove', 'touchstart', 'touchmove'].forEach(event => {
+  container.addEventListener(event, resetInactivityTimer);
+});
+
+// Inicia o scroll automático
+startAutoScroll();
